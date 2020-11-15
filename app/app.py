@@ -1,14 +1,25 @@
 from flask import Flask
 from app.database import init_db
-import app.users.models
+from app import user
+
 
 def create_app():
-    flask_app = Flask(__name__)
-    flask_app.config.from_object('app.config.Config')
+    app = Flask(__name__)
+    app.config.from_object('app.config.Config')
 
-    init_db(flask_app)
+    init_db(app)
+    register_blueprints(app)
 
-    return flask_app
+    return app
+
+
+def register_blueprints(app):
+    app.register_blueprint(user.views.app)
 
 
 app = create_app()
+
+
+@app.route('/')
+def func_1():
+    return 'Hello world'
