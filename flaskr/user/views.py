@@ -1,6 +1,7 @@
 """User views."""
 
 from flask import Blueprint
+# from app.database import db
 
 app = Blueprint('user', __name__)
 

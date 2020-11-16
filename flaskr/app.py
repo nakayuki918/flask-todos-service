@@ -1,6 +1,6 @@
-from flask import Flask
-from app.database import init_db
-from app import user
+from flask import Flask, jsonify
+from flaskr.database import init_db
+from flaskr import user
 
 
 def create_app():
@@ -21,5 +21,5 @@ app = create_app()
 
 
 @app.route('/')
-def func_1():
-    return 'Hello world'
+def index():
+    return jsonify({"language": "python"}), 200
