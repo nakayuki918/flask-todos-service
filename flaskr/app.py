@@ -5,7 +5,7 @@ from flaskr import user
 
 def create_app():
     app = Flask(__name__)
-    app.config.from_object('app.config.Config')
+    app.config.from_object('flaskr.config.Config')
 
     init_db(app)
     register_blueprints(app)

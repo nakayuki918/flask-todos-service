@@ -10,6 +10,9 @@ flask-sqlalchemy = "*"
 pymysql = "*"
 flask = "*"
 flask-migrate = "*"
+marshmallow = "*"
+flask-marshmallow = "*"
+marshmallow-sqlalchemy = "*"
 
 [dev-packages]
 
