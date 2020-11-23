@@ -18,8 +18,3 @@ def register_blueprints(app):
 
 
 app = create_app()
-
-
-@app.route('/')
-def index():
-    return jsonify({"language": "python"}), 200
