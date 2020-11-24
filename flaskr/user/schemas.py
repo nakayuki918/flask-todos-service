@@ -7,7 +7,7 @@ class UserSchema(ma.SQLAlchemySchema):
         model = User
 
     id = ma.auto_field()
-    name = ma.auto_field()
+    # name = ma.auto_field()
 
 
 user_schema = UserSchema()
